@@ -4,7 +4,7 @@
                             'list-group-item-success': (_Post_.like > _Post_.dislike) ,
                             'list-group-item-danger': (_Post_.like < _Post_.dislike)}">
 
-      <div class="datePost">{{_Post_.create_at | date: 'dd/MM/yyyy, HH:mm'}}</div>
+      <div class="datePost">{{_Post_.create_at | date: 'dd/MM/yyyy, HH:mm  aa'}}</div>
       <div><h3>{{_Post_.title}}</h3></div>
       
       <div style="font-family: cursive">{{_Post_.content}}</div>
