@@ -28,7 +28,7 @@ export class AppComponent {
       create_at: new Date()
     },
     {
-      title: 'Encore un post post',
+      title: 'Encore un post',
       content: this.content,
       like: 0,
       dislike: 0,
