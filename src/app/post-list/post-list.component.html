@@ -1,7 +1,6 @@
 <div class="bigDiv list-group">
 
-
-  <div class="post" [ngClass]="{'list-group-item': true,
+  <div class="post" *ngFor="let PostListItemComponent of Posts" [ngClass]="{'list-group-item': true,
                             'list-group-item-success': (PostListItemComponent.like > PostListItemComponent.dislike) ,
                             'list-group-item-danger': (PostListItemComponent.like < PostListItemComponent.dislike)}">
 

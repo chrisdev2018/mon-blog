@@ -16,7 +16,7 @@ export class AppComponent {
     {
       title: 'Mon premier post',
       content: this.content,
-      like: 0,
+      like: 1,
       dislike: 0,
       create_at: new Date()
     },
@@ -31,7 +31,7 @@ export class AppComponent {
       title: 'Encore un post',
       content: this.content,
       like: 0,
-      dislike: 0,
+      dislike: 2,
       create_at: new Date()
     }
   ];
