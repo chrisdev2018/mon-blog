@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Post} from  './post';
 
 @Component({
   selector: 'app-root',
@@ -12,29 +13,11 @@ export class AppComponent {
   content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
    Git en ligne que les validateurs doivent pouvoir cloner. ';
 
-   PostsTab = [
-    {
-      title: 'Mon premier post',
-      content: this.content,
-      like: 1,
-      dislike: 0,
-      create_at: new Date()
-    },
-    {
-      title: 'Mon Deuxième post',
-      content: this.content,
-      like: 0,
-      dislike: 0,
-      create_at: new Date()
-    },
-    {
-      title: 'Encore un post',
-      content: this.content,
-      like: 0,
-      dislike: 2,
-      create_at: new Date()
-    }
-  ];
+  post1 = new Post("Mon premier post", this.content);
+  post2 = new Post("Mon deuxième post", this.content);
+  post3 = new Post("Encore un post", this.content);
+
+   PostsTab= [this.post1, this.post2, this.post3];
 
 
 }

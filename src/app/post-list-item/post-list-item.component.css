@@ -1,0 +1,16 @@
+.datePost{
+    float: right;
+}
+
+.post{
+    width: 500px;
+}
+
+.bigDiv{
+    margin-left: 30px;
+}
+
+.likes{
+    float: right;
+    margin-top: 20px;
+}

@@ -1,3 +1,22 @@
-<p>
-  post-list-item works!
-</p>
+<div class="bigDiv list-group">
+
+    <div class="post" [ngClass]="{'list-group-item': true,
+                              'list-group-item-success': (_Post_.like > _Post_.dislike) ,
+                              'list-group-item-danger': (_Post_.like < _Post_.dislike)}">
+  
+        <div class="datePost">{{_Post_.create_at | date: 'dd/MM/yyyy, HH:mm'}}</div>
+        <div><h3>{{_Post_.title}}</h3></div>
+        
+        <div style="font-family: cursive">{{_Post_.content}}</div>
+        <div class="likes">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> {{_Post_.like}}</span><br>
+            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"> {{_Post_.dislike}}</span>
+        </div>
+        
+        <br>
+        <button class="btn btn-success" (click)="liker()">Love it</button>
+        <button class="btn btn-danger" (click)="disliker()">Don't love it</button>
+        <br>   
+    </div>
+  </div>
+  
