@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Post} from '../post';
+import {Post} from '../utils/post';
 
 @Component({
   selector: 'app-post-list-item',
@@ -11,11 +11,11 @@ export class PostListItemComponent implements OnInit {
   @Input()
   _Post_: Post;
 
-  liker(){
+  liker() {
     this._Post_.like += 1;
   }
 
-  disliker(){
+  disliker() {
     this._Post_.dislike += 1;
   }
 

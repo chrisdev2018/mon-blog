@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +8,9 @@ import { PostService } from './services/post.service';
 export class AppComponent implements OnInit {
   title = 'Mon premier projet Angular';
 
-  posts: any[];
-  constructor(private ServicePost: PostService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.posts = this.ServicePost.PostsTab;
   }
 }

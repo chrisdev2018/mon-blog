@@ -1,4 +1,4 @@
-import {Post} from '../post';
+import {Post} from '../utils/post';
 
 export class PostService {
   content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
