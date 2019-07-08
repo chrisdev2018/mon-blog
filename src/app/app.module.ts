@@ -9,6 +9,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostListItemComponent } from './post-list-item/post-list-item.component';
 import { PostService } from './services/post.service';
 import { AuthComponent } from './auth/auth.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthComponent } from './auth/auth.component';
     FormsModule
   ],
   providers: [
-    PostService
+    PostService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

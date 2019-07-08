@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostListComponent } from './post-list/post-list.component';
 import { AuthComponent } from './auth/auth.component';
+import { AppComponent } from './app.component';
+import { PostListItemComponent } from './post-list-item/post-list-item.component';
 
 const routes: Routes = [
   {
@@ -10,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: AuthComponent
+    component: PostListItemComponent
   },
   {
     path: 'login-page',

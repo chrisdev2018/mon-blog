@@ -1,3 +1,2 @@
-<p>
-  auth works!
-</p>
+<li><button class="btn btn-success" *ngIf="!authStatus" (click)="signIn()" >Se connecter</button></li>
+<li><button class="btn btn-danger" *ngIf="authStatus" (click)="signOut()">Se déconnecter</button></li>
