@@ -1,23 +1,19 @@
-import { Component } from '@angular/core';
-import {Post} from  './post';
+import { Component, OnInit } from '@angular/core';
+import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Mon premier projet Angular';
 
+  posts: any[];
+  constructor(private ServicePost: PostService) {
+  }
 
-  content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
-   Git en ligne que les validateurs doivent pouvoir cloner. ';
-
-  post1 = new Post("Mon premier post", this.content);
-  post2 = new Post("Mon deuxième post", this.content);
-  post3 = new Post("Encore un post", this.content);
-
-   PostsTab= [this.post1, this.post2, this.post3];
-
-
+  ngOnInit() {
+    this.posts = this.ServicePost.PostsTab;
+  }
 }

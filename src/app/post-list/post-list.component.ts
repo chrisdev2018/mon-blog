@@ -8,7 +8,6 @@ import {Post} from '../post'
 })
 export class PostListComponent implements OnInit {
 
-  
   @Input()
   Posts: Post[];
 
