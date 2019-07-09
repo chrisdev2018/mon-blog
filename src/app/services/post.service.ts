@@ -9,4 +9,12 @@ export class PostService {
   post3 = new Post("Encore un post", this.content);
 
    PostsTab = [this.post1, this.post2, this.post3];
+
+   post: Post;
+
+   nouveau_post(titre: string, contenu: string) {
+     this.post = new Post(titre, contenu);
+
+     this.PostsTab.push(this.post);
+   }
 }

@@ -4,6 +4,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { AuthComponent } from './auth/auth.component';
 import { AppComponent } from './app.component';
 import { PostListItemComponent } from './post-list-item/post-list-item.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'login-page',
     component: AuthComponent
+  },
+  {
+    path: 'post-edit',
+    component: EditPostComponent
   }
 ];
 

@@ -10,6 +10,7 @@ import { PostListItemComponent } from './post-list-item/post-list-item.component
 import { PostService } from './services/post.service';
 import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './services/auth.service';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AuthService } from './services/auth.service';
     NavbarComponent,
     PostListComponent,
     PostListItemComponent,
-    AuthComponent
+    AuthComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
