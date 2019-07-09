@@ -8,15 +8,15 @@
         <label for="title">
           Titre
         </label>
-        <input type="text" id="title" name="title" class="form-control" ngModel>
+        <input type="text" id="title" name="title" class="form-control" ngModel required>
       </div>
       <div class="form-group">
         <label for="content">
           Contenu
         </label>
-        <input type="text" id="content" name="content" class="form-control" ngModel>
+        <input type="text" id="content" name="content" class="form-control" ngModel required>
       </div>
-      <button class="btn btn-primary" type="submit">Enregistrer</button>
+      <button class="btn btn-primary" type="submit" [disabled]='f.invalid'>Enregistrer</button>
     </form>
   </div>
 </div>
