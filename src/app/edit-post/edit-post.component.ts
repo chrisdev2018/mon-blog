@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { PostService } from '../services/post.service';
 import { Router } from '@angular/router';
+import { Post } from '../models/post';
 
 @Component({
   selector: 'app-edit-post',
@@ -11,21 +12,39 @@ import { Router } from '@angular/router';
 export class EditPostComponent implements OnInit {
 
   constructor(private postService: PostService,
-              private router: Router) { }
+              private router: Router, private builderForm: FormBuilder) { }
 
-    onSubmit(form: NgForm) {
-      this.postService.nouveau_post(
-        form.value.title,
-        form.value.content
-      );
+  userForm: FormGroup;
 
+  onSubmit() {
+    // this.postService.nouveau_post();
+
+    const formValues = this.userForm.value;
+
+    this.postService.nouveau_post(
+// tslint:disable-next-line: no-string-literal
+      this.userForm['title'], this.userForm['content']
+    );
+
+    setTimeout(() => {
       alert('Informations bien enregistrées!!!');
+      this.userForm.reset();
+    }, 2000);
 
-      form.resetForm();
+    setTimeout(() => {
       this.router.navigate(['/liste-des-posts']);
-      //TODO: attendre même 3 secondes avant de faire la redirection
-    }
+    }, 2000);
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.initForm();
+  }
+
+  initForm() {
+    this.userForm = this.builderForm.group({
+      title: '',
+      content: ''
+    });
+  }
 
 }
