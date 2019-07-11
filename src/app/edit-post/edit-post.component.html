@@ -16,7 +16,7 @@
         </label>
         <input type="text" id="content" formControlName="content" class="form-control" required>
       </div>
-      <button class="btn btn-primary" type="submit">Enregistrer</button>
+      <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Enregistrer</button>
     </form>
   </div>
 </div>

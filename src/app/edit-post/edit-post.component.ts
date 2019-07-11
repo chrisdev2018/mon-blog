@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PostService } from '../services/post.service';
 import { Router } from '@angular/router';
 import { Post } from '../models/post';
@@ -42,8 +42,8 @@ export class EditPostComponent implements OnInit {
 
   initForm() {
     this.userForm = this.builderForm.group({
-      title: '',
-      content: ''
+      title: ['', Validators.required],
+      content: ['', Validators.required]
     });
   }
 
