@@ -1,8 +1,9 @@
 export class Post {
     title: string;
     content: string;
-    like: number
-    dislike: number
+    like: number;
+    dislike: number;
+// tslint:disable-next-line: variable-name
     create_at: Date;
 
     constructor(titre: string, contenu: string) {

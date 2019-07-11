@@ -1,4 +1,5 @@
 import {Post} from '../models/post';
+import { Subject } from 'rxjs';
 
 export class PostService {
   content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
@@ -9,11 +10,16 @@ export class PostService {
   post3 = new Post('Encore un post', this.content);
 
   PostsTab = [this.post1, this.post2, this.post3];
-  post: Post;
 
-   nouveau_post(title: string, content: string) {
-     this.post.title = title;
-     this.post.content = content;
-     this.PostsTab.push(this.post);
+  postSubject = new Subject<Post[]>();
+
+  emitPosts() {
+    this.postSubject.next(this.PostsTab.slice());
+  }
+
+   nouveau_post(titre: string, contenu: string) {
+     const post = new Post(titre, contenu);
+     this.PostsTab.push(post);
+     this.emitPosts();
    }
 }

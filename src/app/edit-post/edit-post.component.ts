@@ -19,21 +19,21 @@ export class EditPostComponent implements OnInit {
   onSubmit() {
     // this.postService.nouveau_post();
 
-    const formValues = this.userForm.value;
+    const formValues = this.userForm.value.title;
 
     this.postService.nouveau_post(
 // tslint:disable-next-line: no-string-literal
-      this.userForm['title'], this.userForm['content']
+      this.userForm.value.title,
+      this.userForm.value.content
     );
 
     setTimeout(() => {
       alert('Informations bien enregistrées!!!');
-      this.userForm.reset();
     }, 2000);
 
     setTimeout(() => {
       this.router.navigate(['/liste-des-posts']);
-    }, 2000);
+    }, 5000);
   }
 
   ngOnInit() {
