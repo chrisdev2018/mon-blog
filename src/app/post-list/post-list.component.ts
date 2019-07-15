@@ -23,7 +23,7 @@ export class PostListComponent implements OnInit {
         this.posts = _posts;
       }
     );
-    this.ServicePost.emitPosts();
+    this.ServicePost.emetPosts();
   }
 
 // tslint:disable-next-line: use-life-cycle-interface
