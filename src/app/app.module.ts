@@ -8,8 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostListItemComponent } from './post-list-item/post-list-item.component';
 import { PostService } from './services/post.service';
-import { AuthComponent } from './auth/auth.component';
-import { AuthService } from './services/auth.service';
 import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
@@ -18,7 +16,6 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     NavbarComponent,
     PostListComponent,
     PostListItemComponent,
-    AuthComponent,
     EditPostComponent
   ],
   imports: [
@@ -28,8 +25,7 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     ReactiveFormsModule
   ],
   providers: [
-    PostService,
-    AuthService
+    PostService
   ],
   bootstrap: [AppComponent]
 })
