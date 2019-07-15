@@ -19,6 +19,8 @@ export class PostListItemComponent implements OnInit {
     this._Post_.dislike += 1;
   }
 
+  
+
   constructor() { }
 
   ngOnInit() {
