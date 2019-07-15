@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Post} from '../models/post';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-post-list-item',
@@ -11,17 +12,17 @@ export class PostListItemComponent implements OnInit {
   @Input()
   _Post_: Post;
 
-  liker() {
-    this._Post_.like += 1;
+  onLike() {
+    this.servicePost.liker(this._Post_.id);
   }
 
-  disliker() {
-    this._Post_.dislike += 1;
+  onDisLike() {
+    this.servicePost.disliker(this._Post_.id);
   }
 
   
 
-  constructor() { }
+  constructor(private servicePost: PostService) { }
 
   ngOnInit() {
   }

@@ -38,4 +38,23 @@ export class PostService {
       this.newId_ = (this.PostsTab[this.PostsTab.length - 1]).id +1;
      }
    }
+
+
+   liker(id: number) {
+     this.PostsTab.forEach((_post) =>{
+       if(_post.id == id) {
+         _post.like += 1;
+       }
+     });
+  }
+
+  disliker(id: number) {
+    this.PostsTab.forEach((_post) =>{
+      if(_post.id == id) {
+        _post.dislike += 1;
+      }
+    });
+ }
+
+  
 }
