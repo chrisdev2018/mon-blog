@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Post} from '../models/post';
+import { Router } from '@angular/router';
 import { PostService } from '../services/post.service';
 
 @Component({
@@ -20,9 +21,17 @@ export class PostListItemComponent implements OnInit {
     this.servicePost.disliker(this._Post_.id);
   }
 
+  onDelete(id: number) {
+    if(confirm('Voulez vous vraiment supprimer ce post ? ')) {
+      
+      this.servicePost.deletePost(this._Post_.id);
+      alert('post supprimé');
+    }
+  }
   
-
-  constructor(private servicePost: PostService) { }
+  
+  constructor(private servicePost: PostService,
+    private router: Router) { }
 
   ngOnInit() {
   }

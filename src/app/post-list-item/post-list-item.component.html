@@ -11,13 +11,13 @@
       <div class="likes">
           <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> {{_Post_.like}}</span><br>
           <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"> {{_Post_.dislike}}</span><br>
-          <button class="btn btn-danger" >Supprimer Post</button>
+          <button class="btn btn-danger" (click)="onDelete()">Supprimer Post</button>
       </div>
       
       <br>
       <button class="btn btn-success" (click)="onLike()">Love it</button>
       <button class="btn btn-danger" (click)="onDisLike()">Don't love it</button>
-      <br>   
+      <br> 
   </div>
 
   

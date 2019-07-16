@@ -57,4 +57,8 @@ export class PostService {
  }
 
   
+  deletePost(id: number) {  
+    this.PostsTab = this.PostsTab.filter(_post => _post.id !== id);
+    this.emetPosts();
+  }
 }
