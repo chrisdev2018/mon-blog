@@ -25,7 +25,6 @@ export class PostListItemComponent implements OnInit {
     if(confirm('Voulez vous vraiment supprimer ce post ? ')) {
       
       this.servicePost.deletePost(this._Post_.id);
-      alert('post supprimé');
     }
   }
   
