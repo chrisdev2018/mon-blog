@@ -4,15 +4,20 @@ import { Subject } from 'rxjs';
 export class PostService {
 
   newId_: number;
-  content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
-                Git en ligne que les validateurs doivent pouvoir cloner. ';
+  
+  PostsTab = new Array<Post>();
 
+  charger_demo_datas() {
+    let content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
+    Git en ligne que les validateurs doivent pouvoir cloner. ';
 
-  post1 = new Post('Mon premier post', this.content, 1);
-  post2 = new Post('Mon deuxième post', this.content, 2);
-  post3 = new Post('Encore un post', this.content, 3);
+    this.nouveau_post('Mon premier post', content);
+    this.nouveau_post('Mon deuxième post', content);
+    this.nouveau_post('Encore un post', content);
 
-  PostsTab = [this.post1, this.post2, this.post3];
+    this.emetPosts();
+  }
+
 
   postSubject = new Subject<Post[]>();
 
