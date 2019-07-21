@@ -7,7 +7,7 @@ export class PostService {
   
   PostsTab = new Array<Post>();
 
-  charger_demo_datas() {
+  init_demo_datas() {
     let content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
     Git en ligne que les validateurs doivent pouvoir cloner. ';
 

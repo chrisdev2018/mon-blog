@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from './services/post.service';
+import { PostService } from '../app/services/post.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -14,8 +16,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-        if(confirm("Voulez-vous charger les données de demo ?")) {
-          this.postService.charger_demo_datas();
-        }
+        this.charger_demo_datas();
+  }
+
+  charger_demo_datas() {
+      if(confirm("Voulez-vous charger les données de demo ?")) {
+        this.postService.init_demo_datas();            
+    }
   }
 }
