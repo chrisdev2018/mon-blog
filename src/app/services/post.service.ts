@@ -8,8 +8,10 @@ export class PostService {
   PostsTab = new Array<Post>();
 
   init_demo_datas() {
-    let content = 'Le code complet et fonctionnel doit être déposé dans un dépôt\
-    Git en ligne que les validateurs doivent pouvoir cloner. ';
+    let content = 'Le code complet et fonctionnel doit être déposé dans un dépôt Git\
+     en ligne que les validateurs doivent pouvoir cloner. Vous fournirez le lien vers le dépôt.\
+     Le projet doit être fonctionnel une fois que le projet a été cloné et que la commande\
+     npm install a été saisie à la racine.';
 
     this.nouveau_post('Mon premier post', content);
     this.nouveau_post('Mon deuxième post', content);
